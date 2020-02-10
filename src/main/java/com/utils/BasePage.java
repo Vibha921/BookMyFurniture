@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
@@ -14,16 +15,22 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestResult;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.pages.AutomationPractice;
 import com.pages.RegisterPage;
-import com.services.SignUpData;
 
 import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;
-import com.aventstack.extentreports.*;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 
 public class BasePage{
@@ -41,7 +48,7 @@ public class BasePage{
 	public static InputStream inputStream;
 	public static ArrayList<String> list = new ArrayList<>();
 	public RequestSpecification request = null;
-	
+	public AutomationPractice auotmationPracticePage;
 	
 
 	@BeforeSuite
@@ -79,6 +86,7 @@ public class BasePage{
 
 	public void initElements() {
 		registerPage = PageFactory.initElements(driver, RegisterPage.class);
+		auotmationPracticePage = PageFactory.initElements(driver, AutomationPractice.class);
 	}
 
 	public void loadPropertyFile() {
