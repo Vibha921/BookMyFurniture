@@ -22,14 +22,14 @@ public class RegisterTest extends BasePage{
 //		takeScreenShot("Uploaded");
 		auotmationPracticePage.selectMultipleElementsFromDropDrowm();
 		takeScreenShot("Selected multiple elements");
-		auotmationPracticePage.clickOnRadioButton();
-		takeScreenShot("Clicked on radio button");
-		auotmationPracticePage.verifyRadioButtonIsSelected();
-		takeScreenShot("Verified radio button");
-		auotmationPracticePage.clickOnCheckBox();
-		takeScreenShot("Clicked on check box");
-		auotmationPracticePage.verifyCheckBoxIsChecked();
-		takeScreenShot("Verified check box");
+//		auotmationPracticePage.clickOnRadioButton();
+//		takeScreenShot("Clicked on radio button");
+//		auotmationPracticePage.verifyRadioButtonIsSelected();
+//		takeScreenShot("Verified radio button");
+//		auotmationPracticePage.clickOnCheckBox();
+//		takeScreenShot("Clicked on check box");
+//		auotmationPracticePage.verifyCheckBoxIsChecked();
+//		takeScreenShot("Verified check box");
 		
 	  
   }
