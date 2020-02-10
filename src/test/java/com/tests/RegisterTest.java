@@ -18,8 +18,8 @@ public class RegisterTest extends BasePage{
 	  registerPage.clickOnRegisterButton();*/
 	  
 	  test = extent.createTest("PracticeTest");
-		auotmationPracticePage.uplaodTextFile();
-		takeScreenShot("Uploaded");
+//		auotmationPracticePage.uplaodTextFile();
+//		takeScreenShot("Uploaded");
 		auotmationPracticePage.selectMultipleElementsFromDropDrowm();
 		takeScreenShot("Selected multiple elements");
 		auotmationPracticePage.clickOnRadioButton();
