@@ -34,7 +34,7 @@ public class RegisterPage extends Utilities {
 
 	public void clickOnSignInButton() {
 		clickOnElement(SIGN_IN);
-		System.out.println("jagffadfdsaf");
+		log.info("jagffadfdsaf");
 	}
 
 	public void enterFullName(String fullName) {
