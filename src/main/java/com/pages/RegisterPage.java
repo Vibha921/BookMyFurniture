@@ -1,12 +1,13 @@
 package com.pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import com.utils.Utilities;
 
 public class RegisterPage extends Utilities {
 
-	@FindBy(id = "emailId")
+	@FindBy(css = "div.sign-up-main > div > form > div:nth-child(3) > input")
 	WebElement EMAIL_ID;
 
 	@FindBy(id = "name")
@@ -15,7 +16,7 @@ public class RegisterPage extends Utilities {
 	@FindBy(id = "mobileNo")
 	WebElement MOBILE_NUMBER;
 
-	@FindBy(id = "password")
+	@FindBy(css = "div.sign-up-main > div > form > div:nth-child(4)> div > input")
 	WebElement PASSWORD;
 
 	@FindBy(css = "body > app-root > bmf-layout > div:nth-child(2) > app-login > div > div > div.row > div.col-md-5.mt-5.ng-star-inserted > form > div.row > div:nth-child(1) > button")
@@ -27,7 +28,7 @@ public class RegisterPage extends Utilities {
 	@FindBy(css = "body > app-root > bmf-layout > div:nth-child(2) > app-login > div > div > div.row > div.col-md-4 > h3 > div > div:nth-child(2) > button")
 	WebElement CREATE_ACCOUNT;
 
-	@FindBy(css = "body > app-root > bmf-layout > div:nth-child(2) > app-login > div > p-sidebar > div > app-signup > div > div > form > div.row > div:nth-child(1) > button")
+	@FindBy(css = "div.sign-up-main > div > form > div:nth-child(5) > div > button.btn-primary")
 	WebElement REGISTER_BUTTON;
 
 
@@ -49,6 +50,7 @@ public class RegisterPage extends Utilities {
 
 	public void enterPassword(String password) {
 		sendKeysToElement(PASSWORD, password);
+		PASSWORD.sendKeys(Keys.TAB);
 	}
 
 	public void clickOnRegisterButton() {
