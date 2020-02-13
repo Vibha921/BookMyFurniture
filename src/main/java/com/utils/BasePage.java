@@ -129,7 +129,7 @@ public class BasePage{
 
 
 		try {
-             path = System.getProperty("user.dir") + "\\Reports\\Screenshots\\" + text + ".png";
+             path = System.getProperty("user.dir") + "\\Reports\\" + text + ".png";
              log.info(path);
 			FileUtils.copyFile(src, new File(path));
 			test.log(Status.INFO, text, MediaEntityBuilder.createScreenCaptureFromPath(path).build());
